@@ -17,12 +17,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @current_user.name %>
+  <%= User.find(@post.user_id).name %>
 </p>
 
 <p>
   <strong>Published:</strong>
-  <%= @post.published %>
+  <%= @post.created_at %>
 </p>
 
 <% if @post.user_id == @current_user.id %>
