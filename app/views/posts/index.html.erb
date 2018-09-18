@@ -20,11 +20,21 @@
         <td><%= post.tittle %></td>
         <td><%= post.description %></td>
         <td><%= post.image %></td>
-        <td><%= post.user %></td>
+        <td><%= @current_user.name %></td>
         <td><%= post.published %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Ver más', post %>
+        </td>
+        <td>
+          <% if post.user_id == @current_user.id %>
+            <%= link_to 'Editar', edit_post_path(post) %>
+          <% end %>
+        </td>
+        <td>
+         <% if post.user_id == @current_user.id %>
+            <%= link_to 'Eliminar', post, method: :delete, data: { confirm: '¿Estas seguro de eliminar el post?' } %>
+         <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
