@@ -13,7 +13,7 @@
 
 
 * **Información de la base de datos de dsllo:**
-    * postgresql: mysql2 (Adaptador de la base de datos)
+    * postgres: postgresql (Adaptador de la base de datos)
     * encoding: utf8 (Set de caracteres de la base de datos)
     * username: user_name (Usuario de la base de datos)
     * password: user_password (Contraseña de la base de datos)
